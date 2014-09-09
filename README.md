@@ -2,6 +2,13 @@
 
 [Docker index](https://index.docker.io/u/fixate/mongodb/)
 
+### Build
+
+```
+make build
+```
+
+
 ### Next steps
 
 To run from docker index:
