@@ -19,8 +19,7 @@ CONTAINER=$(docker run -d \
             --name fixate_mongodb \
              -p 27017 -p 28017 \
              -v="/var/mongodb/data:/var/mongodb/data:rw" \
-             -v="/var/mongodb/logs:/var/mongodb/logs:rw" \
-              -d "fixate/mongodb:0.0.1")
+              -d "fixate/mongodb:0.0.3")
 # Start up:
 CONTAINER=$(docker start fixate_mongodb)
 # Get the IP:

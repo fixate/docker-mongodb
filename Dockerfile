@@ -7,8 +7,7 @@ RUN \
   echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | tee /etc/apt/sources.list.d/mongodb.list && \
   apt-get update && \
   apt-get install -y mongodb-org=2.6.5 && \
-  mkdir -p /var/mongodb/data && \
-  apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+  mkdir -p /var/mongodb/data
 
 
 ADD scripts/ /tmp/docker/
@@ -19,7 +18,6 @@ RUN mkdir -p /etc/mongodb && cp -p /tmp/docker/mongodb.conf /etc/mongodb/
 
 # Define mountable directories.
 VOLUME ["/var/mongodb/data"]
-VOLUME ["/var/mongodb/log"]
 
 # Define working directory.
 WORKDIR /var/mongodb/data
@@ -33,4 +31,4 @@ CMD ["/sbin/my_init"]
 EXPOSE 27017
 EXPOSE 28017
 
-
+RUN  apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
