@@ -1,4 +1,4 @@
-# Dockerfile for Mongodb on phusion/baseimage 0.9.13 (Ubuntu 14.04)
+# Dockerfile for Mongodb on phusion/baseimage 0.9.16 (Ubuntu 14.04)
 
 [Docker index](https://index.docker.io/u/fixate/mongodb/)
 

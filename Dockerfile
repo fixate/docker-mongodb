@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.13
+FROM phusion/baseimage:0.9.16
 MAINTAINER Stan Bondi <stan@fixate.it>
 
 # Install MongoDB.
